@@ -1,0 +1,15 @@
+{
+  "name": "hisab-kitab",
+  "version": "1.0.0",
+  "description": "hisab-kitab is an application where a user can maintain and analyze it's payment records, generate invoice, bills etc. This application oneStop solution for small  level buisness.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhay Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1"
+  }
+}
