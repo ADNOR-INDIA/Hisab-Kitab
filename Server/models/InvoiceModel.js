@@ -1,4 +1,6 @@
-const mongoose = reuire('mongoose')
+// when the new invoice gets created this model is used.
+// Models are responsible for creating and reading documents from the underlying MongoDB database.
+const mongoose = require('mongoose')
 
 const InvoiceSchema = mongoose.Schema({
     dueDate:Date,
@@ -35,7 +37,7 @@ const InvoiceSchema = mongoose.Schema({
     createdAt:{
         type:Date,
         default:new Date()
-    }
+    },
 })
 
 const InvoiceModel = mongoose.model('InvoiceModel', InvoiceSchema)

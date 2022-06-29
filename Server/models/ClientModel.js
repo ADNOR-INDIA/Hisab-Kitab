@@ -1,5 +1,5 @@
 // Models are responsible for creating and reading documents from the underlying MongoDB database.
-
+// When the new customer is created this model is used.
 const mongoose = require('mongoose')
 
 const ClientSchema = mongoose.Schema({

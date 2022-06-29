@@ -1,6 +1,6 @@
 // This model will be required when new user will get signup, following things will be required from user end ans info.
-
-const mongoose = reuire('mongoose')
+// Models are responsible for creating and reading documents from the underlying MongoDB database.
+const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
     name:{

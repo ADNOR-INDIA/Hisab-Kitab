@@ -1,3 +1,4 @@
+// Models are responsible for creating and reading documents from the underlying MongoDB database.
 const mongoose = require('mongoose')
 
 const ProfileSchema = mongoose.Schema({
