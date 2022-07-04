@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const InvoiceModel = require('../models/InvoiceModel.js')
 
-export const getInvoiceByUser = async(req, res)=>{
+export const getInvoicesByUser = async(req, res)=>{
     const {searchQuery} = req.query
 
     try{

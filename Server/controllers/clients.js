@@ -69,7 +69,7 @@ export const deleteClient = ()=>{
 }
 
 // get client by user
-export const getClientByUser = async(req, res)=>{
+export const getClientsByUser = async(req, res)=>{
     const {searchQuery} = req.query
     try{
         const clients = await ClientModel.find({userId:searchQuery})
