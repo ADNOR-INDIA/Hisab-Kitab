@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const mongoURI = "mongodb://localhost:27017"
 
@@ -8,4 +8,5 @@ const connectToMongodb = ()=>{
     })
 }
 
-module.exports= connectToMongodb;
+
+export default connectToMongodb;

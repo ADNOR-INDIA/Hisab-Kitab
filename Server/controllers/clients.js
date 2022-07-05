@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const ClientModel = require('../models/ClientModel')
+import mongoose from 'mongoose'
+import ClientModel from '../models/ClientModel.js'
 
 // this will be used to add create new customer, edit the customer, get the data of it etc.
 
@@ -47,7 +47,7 @@ export const createClient = async(req, res)=>{
 }
 
 // update a client/customer
-export const updateClient=()=>{
+export const updateClient=async()=>{
     const{id: _id} = req.params
     const client = req.body
 
@@ -59,7 +59,7 @@ export const updateClient=()=>{
 }
 
 // Delete a client
-export const deleteClient = ()=>{
+export const deleteClient = async()=>{
     const{id} = req.params
     if(!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).send('No customer with this id')

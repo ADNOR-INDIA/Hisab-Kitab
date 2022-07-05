@@ -1,6 +1,6 @@
 // Models are responsible for creating and reading documents from the underlying MongoDB database.
 // When the new customer is created this model is used.
-const mongoose = require('mongoose')
+import mongoose from "mongoose"
 
 const ClientSchema = mongoose.Schema({
     name:String,
@@ -17,4 +17,4 @@ const ClientSchema = mongoose.Schema({
 const ClientModel = mongoose.model('ClientModel', ClientSchema)
 // Note: The .model() function makes a copy of schema. Make sure that you've added everything you want to schema, including hooks, before calling .model()!
 // Mongoose automatically looks for the plural, lowercased version of your model name. Thus, for the example above, the model Tank is for the tanks collection in the database.
-module.exports=ClientModel
+export default ClientModel

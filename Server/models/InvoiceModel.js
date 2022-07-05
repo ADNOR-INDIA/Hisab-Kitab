@@ -1,6 +1,6 @@
 // when the new invoice gets created this model is used.
 // Models are responsible for creating and reading documents from the underlying MongoDB database.
-const mongoose = require('mongoose')
+import mongoose  from 'mongoose'
 
 const InvoiceSchema = mongoose.Schema({
     dueDate:Date,
@@ -9,7 +9,7 @@ const InvoiceSchema = mongoose.Schema({
         itemName:String,
         unitPrice:String,
         quantity:String,
-        discount:Sting
+        discount:String
     }],
     rates:String,
     vat:Number,
@@ -43,4 +43,4 @@ const InvoiceSchema = mongoose.Schema({
 const InvoiceModel = mongoose.model('InvoiceModel', InvoiceSchema)
 //Note: The .model() function makes a copy of schema. Make sure that you've added everything you want to schema, including hooks, before calling .model()!
 // Mongoose automatically looks for the plural, lowercased version of your model name. Thus, for the example above, the model Tank is for the tanks collection in the database.
-module.exports=InvoiceModel
+export default InvoiceModel

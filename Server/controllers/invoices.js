@@ -1,6 +1,6 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const InvoiceModel = require('../models/InvoiceModel.js')
+import express from 'express'
+import mongoose from 'mongoose'
+import InvoiceModel from '../models/InvoiceModel.js'
 
 export const getInvoicesByUser = async(req, res)=>{
     const {searchQuery} = req.query

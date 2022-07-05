@@ -1,7 +1,7 @@
-const jwt  =require('jsonwebtoken')
-const bcrypt = require('bcryptjs')
-const User  = require('../models/userModel.js')
-const ProfileModel = require('../models/ProfileModel.js')
+import jwt  from 'jsonwebtoken'
+import bcrypt from 'bcryptjs'
+import User from '../models/userModel.js'
+import ProfileModel from '../models/ProfileModel.js'
 
 
 // Creating a user i.e. making a signup function.
@@ -32,7 +32,7 @@ export const signup = async(req, res)=>{
 }
 
 // Creating a signin function
-export const signin = ()=>{
+export const signin = async()=>{
     // taking the value of email and password from the login details filled by the user in the body and we will operate on these files.
     const{email, password}= req.body
     try{

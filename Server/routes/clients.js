@@ -1,4 +1,4 @@
-const express = require('express')
+import express from 'express'
 import {getClients, createClient, updateClient, deleteClient, getClientsByUser} from '../controllers/clients.js'
 
 const router = express.Router()
